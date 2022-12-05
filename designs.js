@@ -18,6 +18,7 @@ function makeGrid(event) {
         for (j = 0; j < width; j++) {
             const cell = document.createElement('td');
             row.appendChild(cell);
+            // allows user to change the background color of each cell
             cell.addEventListener('click', function() {
                 cell.style.backgroundColor = color;
             });
@@ -27,4 +28,5 @@ function makeGrid(event) {
     event.preventDefault();
 };
 
+// calls makeGrid() once user clicks submit
 submit.addEventListener('click', makeGrid);
